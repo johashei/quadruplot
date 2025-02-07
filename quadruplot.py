@@ -1,12 +1,12 @@
-"""quadruplot
+"""# quadruplot
 
-Plot quadrupole deformed spheroid using the parameters β and γ
+Plot quadrupole deformed spheroid using the parameters β and γ.
 
 Usage:
     quadruplot NAME [--beta VAL] [--gamma VAL] [--frames INT] [--delay INT]
     quadruplot (-h | --help)
     quadruplot --version
-    Quadruplot --license
+    quadruplot --license
 
 Options:
     --beta VAL      Range for β. Can be either a number or a range
@@ -54,7 +54,10 @@ import numpy as np
 from tqdm import tqdm
 
 def main():
-    args = docopt(__doc__, verison=__version__)
+    args = docopt(__doc__, version=__version__)
+    if args['--license']:
+        print(__copying__)
+        sys.exit()
 
     name = args['NAME']
     beta, gamma = make_params(args['--beta'], args['--gamma'], args['--frames'])
