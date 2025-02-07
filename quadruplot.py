@@ -2,6 +2,7 @@
 
 Plot quadrupole deformed spheroid using the parameters β and γ.
 
+```
 Usage:
     quadruplot NAME [--beta VAL] [--gamma VAL] [--frames INT] [--delay INT]
     quadruplot (-h | --help)
@@ -17,6 +18,7 @@ Options:
     --delay INT     Delay between the frames / 10 ms. [default: 15]
     --version       Print version number.
     --license       Print license information.
+```
 """
 __copying__ = """
 Copyright Johannes Sørby Heines 2025
